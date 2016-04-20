@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="BoomDots.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="play.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PlayScreen"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Play"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="79"/>
+        <CursorPos X="14" Y="98"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="play.pas"/>
+        <Caret Line="60" Column="30" TopLine="42"/>
+      </Position1>
+      <Position2>
+        <Filename Value="play.pas"/>
+        <Caret Line="51" Column="68" TopLine="39"/>
+      </Position2>
+      <Position3>
+        <Filename Value="play.pas"/>
+        <Caret Line="73" Column="3" TopLine="56"/>
+      </Position3>
+      <Position4>
+        <Filename Value="play.pas"/>
+        <Caret Line="79" Column="3" TopLine="62"/>
+      </Position4>
+      <Position5>
+        <Filename Value="play.pas"/>
+        <Caret Line="85" Column="3" TopLine="68"/>
+      </Position5>
+      <Position6>
+        <Filename Value="play.pas"/>
+        <Caret Line="91" Column="3" TopLine="74"/>
+      </Position6>
+      <Position7>
+        <Filename Value="play.pas"/>
+        <Caret Line="76" Column="7" TopLine="55"/>
+      </Position7>
+      <Position8>
+        <Filename Value="play.pas"/>
+        <Caret Line="74" Column="5" TopLine="59"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
