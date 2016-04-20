@@ -12,7 +12,7 @@ object PlayScreen: TPlayScreen
   object Image1: TImage
     Left = 0
     Height = 720
-    Top = 0
+    Top = -110
     Width = 380
     OnClick = Image1Click
     Picture.Data = {
@@ -2047,6 +2047,20 @@ object PlayScreen: TPlayScreen
     Interval = 10
     OnTimer = Timer2Timer
     left = 48
+    top = 40
+  end
+  object Timer3: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = Timer3Timer
+    left = 88
+    top = 40
+  end
+  object Timer4: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = Timer4Timer
+    left = 128
     top = 40
   end
 end
