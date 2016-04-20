@@ -1,3 +1,11 @@
+# Lazarus Build
+lib/
+# Lazarus Backup
+backup/
+
+# BoomDot history
+*.sait
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

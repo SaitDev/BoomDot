@@ -1,6 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
+# For Lazarus pascal
+*.pas    diff=pascal
+
 # Custom for Visual Studio
 *.cs     diff=csharp
 
