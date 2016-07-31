@@ -53,6 +53,7 @@ var
   targetToLeft: Boolean;
   backgroudSpeed, backgroupTop, dropDownSpeed: Real;
 
+// Target's moving loop
 procedure TPlayScreen.Timer1Timer(Sender: TObject);
 begin
   if targetToLeft then
@@ -68,6 +69,7 @@ begin
   end;
 end;
 
+// Player shots
 procedure TPlayScreen.Timer2Timer(Sender: TObject);
 var
   distance : Real;
@@ -100,6 +102,7 @@ begin
     end;
 end;
 
+// Background moving, player auto moving
 procedure TPlayScreen.Timer3Timer(Sender: TObject);
 begin
   if dotSpeed>1 then
@@ -126,6 +129,7 @@ begin
   if Image1.Top>=0 then backgroupTop:=-110;
 end;
 
+// Target come in
 procedure TPlayScreen.Timer4Timer(Sender: TObject);
 begin
   if dropDownSpeed>=1 then
@@ -138,6 +142,7 @@ begin
   end;
 end;
 
+// Game opened
 procedure TPlayScreen.FormShow(Sender: TObject);
 begin
    targetSpeed:=4;
@@ -148,27 +153,32 @@ begin
    Randomize;
 end;
 
+// Background
 procedure TPlayScreen.Image1Click(Sender: TObject);
 begin
   dotSpeed:=10;
   Timer2.Enabled:=True;
 end;
 
+// Top
 procedure TPlayScreen.Image2Click(Sender: TObject);
 begin
   Image1Click(Image1);
 end;
 
+// Bottom
 procedure TPlayScreen.Image3Click(Sender: TObject);
 begin
   Image1Click(Image1);
 end;
 
+// Target
 procedure TPlayScreen.Image4Click(Sender: TObject);
 begin
   Image1Click(Image1);
 end;
 
+// Player
 procedure TPlayScreen.Image5Click(Sender: TObject);
 begin
   Image1Click(Image1);
