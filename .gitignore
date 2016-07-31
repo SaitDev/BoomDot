@@ -2,6 +2,7 @@
 lib/
 # Lazarus Backup
 backup/
+*.bak
 
 # BoomDot history
 *.sait
