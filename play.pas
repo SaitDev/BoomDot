@@ -53,7 +53,9 @@ var
   targetToLeft: Boolean;
   backgroudSpeed, backgroupTop, dropDownSpeed: Real;
 
+// ====================
 // Target's moving loop
+
 procedure TPlayScreen.Timer1Timer(Sender: TObject);
 begin
   if targetToLeft then
@@ -69,7 +71,9 @@ begin
   end;
 end;
 
+// ============
 // Player shots
+
 procedure TPlayScreen.Timer2Timer(Sender: TObject);
 var
   distance : Real;
@@ -83,7 +87,7 @@ begin
     //Image5.Top:=425;
     Timer2.Enabled:=False;
     sndPlaySound('Sounds\Scored.wav',SND_ASYNC or SND_NODEFAULT);
-    backgroudSpeed:=22;
+    backgroudSpeed:=20;
     dotSpeed:=15;
     Image4.Hide;
     Timer1.Enabled:=False;
@@ -92,6 +96,7 @@ begin
     Label1.Caption:=IntToStr(score);
     Image4.Top:=200 + Random(150);
   end
+  // Bắn hụt / Missed
   else if Image5.Top<=26 then
     begin
       Timer2.Enabled:=False;
@@ -102,7 +107,9 @@ begin
     end;
 end;
 
+// =====================================
 // Background moving, player auto moving
+
 procedure TPlayScreen.Timer3Timer(Sender: TObject);
 begin
   if dotSpeed>1 then
@@ -127,22 +134,27 @@ begin
   backgroupTop:=backgroupTop+backgroudSpeed;
   Image1.Top:=round(backgroupTop);
   if Image1.Top>=0 then backgroupTop:=-110;
+  if backgroudSpeed > 1 then backgroudSpeed-=1;
 end;
 
+// ==============
 // Target come in
+
 procedure TPlayScreen.Timer4Timer(Sender: TObject);
 begin
   if dropDownSpeed>=1 then
   begin
     Image4.Top:=Image4.Top + round(dropDownSpeed);
-    dropDownSpeed:=dropDownSpeed - 0.5;
+    dropDownSpeed-= 0.5;
   end
   else begin
       Timer4.Enabled:=False;
   end;
 end;
 
+// ===========
 // Game opened
+
 procedure TPlayScreen.FormShow(Sender: TObject);
 begin
    targetSpeed:=4;
@@ -153,32 +165,42 @@ begin
    Randomize;
 end;
 
+// ==========
 // Background
+
 procedure TPlayScreen.Image1Click(Sender: TObject);
 begin
   dotSpeed:=10;
   Timer2.Enabled:=True;
 end;
 
+// ===
 // Top
+
 procedure TPlayScreen.Image2Click(Sender: TObject);
 begin
   Image1Click(Image1);
 end;
 
+// ======
 // Bottom
+
 procedure TPlayScreen.Image3Click(Sender: TObject);
 begin
   Image1Click(Image1);
 end;
 
+// ======
 // Target
+
 procedure TPlayScreen.Image4Click(Sender: TObject);
 begin
   Image1Click(Image1);
 end;
 
+// ======
 // Player
+
 procedure TPlayScreen.Image5Click(Sender: TObject);
 begin
   Image1Click(Image1);

@@ -1,7 +1,7 @@
 object PlayScreen: TPlayScreen
-  Left = 966
+  Left = 968
   Height = 550
-  Top = 140
+  Top = 136
   Width = 380
   Caption = 'PlayScreen'
   ClientHeight = 550
