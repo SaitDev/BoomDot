@@ -23,6 +23,7 @@ type
     Timer2: TTimer;
     Timer3: TTimer;
     Timer4: TTimer;
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
@@ -47,6 +48,8 @@ implementation
 {$R *.lfm}
 
 { TPlayScreen }
+
+uses Main;
 
 var
   targetSpeed, dotSpeed, score: Integer;
@@ -163,6 +166,11 @@ begin
    backgroupTop:=-110;
    backgroudSpeed:=22;
    Randomize;
+end;
+
+procedure TPlayScreen.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  MainWindow.Close;
 end;
 
 // ==========

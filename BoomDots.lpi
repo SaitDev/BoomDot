@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="BoomDots.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -46,6 +46,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Play"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainWindow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
