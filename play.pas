@@ -23,6 +23,7 @@ type
     Timer2: TTimer;
     Timer3: TTimer;
     Timer4: TTimer;
+    procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
@@ -45,6 +46,8 @@ var
 implementation
 
 {$R *.lfm}
+
+uses Main;
 
 { TPlayScreen }
 
@@ -88,7 +91,7 @@ begin
     //Image5.Top:=425;
     Timer2.Enabled:=False;
     sndPlaySound('Sounds\Scored.wav',SND_ASYNC or SND_NODEFAULT);
-    backgroudSpeed:=22;
+    backgroudSpeed:=20;
     dotSpeed:=15;
     Image4.Hide;
     Timer1.Enabled:=False;
@@ -135,6 +138,7 @@ begin
   backgroupTop:=backgroupTop+backgroudSpeed;
   Image1.Top:=round(backgroupTop);
   if Image1.Top>=0 then backgroupTop:=-110;
+  if backgroudSpeed > 1 then backgroudSpeed-=1;
 end;
 
 // ==============
@@ -145,7 +149,7 @@ begin
   if dropDownSpeed>=1 then
   begin
     Image4.Top:=Image4.Top + round(dropDownSpeed);
-    dropDownSpeed:=dropDownSpeed - 0.5;
+    dropDownSpeed-= 0.5;
   end
   else begin
       Timer4.Enabled:=False;
@@ -163,6 +167,11 @@ begin
    backgroupTop:=-110;
    backgroudSpeed:=22;
    Randomize;
+end;
+
+procedure TPlayScreen.FormCloseQuery(Sender: TObject; var CanClose: boolean);
+begin
+  MainWindow.Close;
 end;
 
 // ==================
