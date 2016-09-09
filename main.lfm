@@ -1,10 +1,10 @@
 object MainWindow: TMainWindow
   Left = 1003
-  Height = 420
+  Height = 360
   Top = 198
   Width = 320
   Caption = 'MainWindow'
-  ClientHeight = 420
+  ClientHeight = 360
   ClientWidth = 320
   Color = 14847259
   LCLVersion = '1.6.0.4'
@@ -1848,14 +1848,14 @@ object MainWindow: TMainWindow
     }
   end
   object Label1: TLabel
-    Left = 40
-    Height = 82
-    Top = 80
-    Width = 245
+    Left = 30
+    Height = 87
+    Top = 60
+    Width = 262
     Caption = 'BOOM DOTS'
     Font.CharSet = VIETNAMESE_CHARSET
     Font.Color = 2237183
-    Font.Height = -75
+    Font.Height = -80
     Font.Name = 'BigNoodleTitling'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -1865,7 +1865,7 @@ object MainWindow: TMainWindow
   object Image2: TImage
     Left = 60
     Height = 60
-    Top = 220
+    Top = 210
     Width = 200
     OnMouseEnter = Image2MouseEnter
     Picture.Data = {
@@ -1944,7 +1944,7 @@ object MainWindow: TMainWindow
   object Image3: TImage
     Left = 60
     Height = 60
-    Top = 220
+    Top = 210
     Width = 200
     OnClick = Image3Click
     OnMouseLeave = Image3MouseLeave
