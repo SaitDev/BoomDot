@@ -8,6 +8,7 @@ object PlayScreen: TPlayScreen
   ClientWidth = 380
   Color = 6299670
   OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   LCLVersion = '1.6.0.4'
   object Image1: TImage
@@ -1940,7 +1941,7 @@ object PlayScreen: TPlayScreen
     }
   end
   object Image4: TImage
-    Left = 160
+    Left = 166
     Height = 48
     Top = 256
     Width = 48
@@ -1983,7 +1984,7 @@ object PlayScreen: TPlayScreen
     }
   end
   object Image5: TImage
-    Left = 176
+    Left = 174
     Height = 32
     Top = 424
     Width = 32

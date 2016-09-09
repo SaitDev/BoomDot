@@ -24,6 +24,7 @@ type
     Timer3: TTimer;
     Timer4: TTimer;
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
@@ -54,23 +55,28 @@ uses Main;
 var
   targetSpeed, dotSpeed, score: Integer;
   targetToLeft: Boolean;
-  backgroudSpeed, backgroupTop, dropDownSpeed: Real;
+  backgroudSpeed, backgroupTop, dropDownSpeed, targetLeft: Real;
 
 // ====================
 // Target's moving loop
 
 procedure TPlayScreen.Timer1Timer(Sender: TObject);
 begin
+  if targetLeft=0 then targetLeft:=Image4.Left;;
   if targetToLeft then
   begin
-    Image4.Left:=Image4.Left-targetSpeed;
+    targetLeft-= targetSpeed*(1 - sin(abs(Image4.Left+24 - 190)*pi/640));
+    Image4.Left:= round(targetLeft);
+    Image4.Update;
     Image1.Refresh;
     if Image4.Left<=20 then targetToLeft:=False;
   end
   else begin
-    Image4.Left:=Image4.Left+targetSpeed;
+    targetLeft+= targetSpeed*(1 - sin(abs(Image4.Left+24 -190)*pi/640));
+    Image4.Left:= round(targetLeft);
+    Image4.Update;
     Image1.Refresh;
-    if Image4.Left+32>=360 then targetToLeft:=True;
+    if Image4.Left+48>=360 then targetToLeft:=True;
   end;
 end;
 
@@ -171,6 +177,11 @@ end;
 procedure TPlayScreen.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   MainWindow.Close;
+end;
+
+procedure TPlayScreen.FormCreate(Sender: TObject);
+begin
+  PlayScreen.DoubleBuffered:=True;
 end;
 
 // ==========
