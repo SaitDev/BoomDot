@@ -88,7 +88,6 @@ begin
   // Ghi điểm / Scored
   if distance <= 40 then
   begin
-    //Image5.Top:=425;
     Timer2.Enabled:=False;
     sndPlaySound('Sounds\Scored.wav',SND_ASYNC or SND_NODEFAULT);
     backgroudSpeed:=20;
